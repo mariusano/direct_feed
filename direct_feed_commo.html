@@ -1,24 +1,39 @@
+<html>
+    <head>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script>
-  month_comprehension = ["", "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", 
-    "septembre", "octobre", "novembre", "décembre"]
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
+        <!-- <link rel="icon" href="sources/simple-logo.png"> -->
 
 
-  glossaire_direct_feed = {"wheat_UE":6, "wheat_US":22, "corn_UE":2, "corn_US":23, 
-    "rapeseed_UE":7, "soybean_US":25, "soyoil_US":26, "soymeal_US":29,
-    }
+    </head>
 
-  var settings = {
-    "url": "https://marketdataserver.com/api/maturities.php?future_id=5&delayed=false",
-    "method": "GET",
-    "timeout": 0,
-  };
+    <body>
+      <script>
+        month_comprehension = ["", "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", 
+          "septembre", "octobre", "novembre", "décembre"]
 
-  function getPrices(id) {
-    $.ajax(settings).done(function (response) {
-     return(response);
-    });
-  }
 
-  
-</script>
+        glossaire_direct_feed = {"wheat_UE":6, "wheat_US":22, "corn_UE":2, "corn_US":23, 
+          "rapeseed_UE":7, "soybean_US":25, "soyoil_US":26, "soymeal_US":29,
+          }
+
+        var settings = {
+          "url": "https://marketdataserver.com/api/maturities.php?future_id=5&delayed=false",
+          "method": "GET",
+          "timeout": 0,
+        };
+
+        function getPrices(id) {
+          $.ajax(settings).done(function (response) {
+           return(response);
+          });
+        }
+
+
+      </script>
+  </body>
+</html>
